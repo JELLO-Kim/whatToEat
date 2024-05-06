@@ -32,6 +32,10 @@ dependencies {
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+
+    // kotlin 에서 json parsing 에러 남
+    implementation 'com.fasterxml.jackson.module:jackson-module-kotlin'
 }
 
 tasks.withType(KotlinCompile) {
