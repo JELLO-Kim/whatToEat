@@ -9,7 +9,6 @@ class RestResponse<T>(
     var userMessages: String = "success",
     var systemMessages: String = "hello develoer",
 ) {
-
     init {
         if (status != HttpStatus.OK) {
             // 에러 처리
@@ -20,12 +19,12 @@ class RestResponse<T>(
             data = pageData.pageData as T
             pageInfo = pageData
         }
-        // data set 처리
-        var resData = HashMap<String, Any?>()
-        resData.put("data", data)
-        resData.put("userMessage", userMessages)
-        resData.put("systemMessage", systemMessages)
-        data = resData as T
+//        // data set 처리
+//        var resData = HashMap<String, Any?>()
+//        resData.put("data", data)
+//        resData.put("userMessage", userMessages)
+//        resData.put("systemMessage", systemMessages)
+//        data = resData as T
 
     }
 }
